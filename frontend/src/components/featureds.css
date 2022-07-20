@@ -1,0 +1,74 @@
+.description{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+   align-items: center;
+   margin:15px;
+   gap:15px;
+}
+
+.eventContainer{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 260px;  
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+}
+
+.eventContainer:hover {
+    cursor: pointer;
+    
+}
+
+.eventTop{
+    display: flex;
+    flex:1;
+    background-image: url("../gaming.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.eventTop2{
+    display: flex;
+    flex:1;
+    background-image: url("../gaming-week.webp");
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.eventBottom{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+   
+}
+
+.eventBottom p, h1, h2{
+    margin-left: 10px;
+    padding: 3px;
+}
+
+.eventBottom p{
+    color:tomato;
+    font-weight:300;
+}
+
+.eventBottom h1{
+    font-size: 20px;
+    font-weight:500;
+}
+
+.eventBottom h2{
+    font-size: 16px;
+    font-weight:300;
+    color:gray;
+}
+
