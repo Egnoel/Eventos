@@ -10,12 +10,17 @@ const ChatProvider = ({ children }) => {
   const [chats, setChats] = useState();
 
   const navigate = useNavigate();
+  var num = 0;
 
   useEffect(() => {
     const userInfo = JSON.parse(localStorage.getItem("userInfo"));
     setUser(userInfo);
-    /*
-    if (!userInfo) navigate("/"); */
+
+    if (!userInfo & (num === 0)) {
+      num++;
+      navigate("/");
+    }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [navigate]);
 
