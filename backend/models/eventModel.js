@@ -3,13 +3,9 @@ const mongoose = require("mongoose");
 const eventSchema = mongoose.Schema(
   {
     title: { type: "String", required: true },
-    organizador: {
-      type: "String",
-      required: true,
-      default: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
-    },
+    creator: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
     type: { type: "String", required: true },
-    eventDate: { type: "Date", required: true },
+    eventDate: { type: "Date", required: true, default: Date.now() },
     description: { type: "String", required: true },
     price: { type: "String", required: true, default: "0.00" },
     location: { type: "String", required: true },
