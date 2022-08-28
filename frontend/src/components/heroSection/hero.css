@@ -1,0 +1,91 @@
+.slider {
+  position: relative;
+  height: 400px;
+  display: flex;
+}
+.slider .right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  font-size: 3rem;
+  color: #000;
+  z-index: 10;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.slider .left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  font-size: 3rem;
+  color: #000;
+  z-index: 10;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.slider .image {
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.slider .slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+  position: absolute;
+  left: 35px;
+  top: 15px;
+  width: 859px;
+}
+.slider .slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}
+.slider .search {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  top: 80%;
+  left: 10%;
+  background-color: #0b0433;
+  color: white;
+}
+.slider .search .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider .search .text {
+  font-size: 10px;
+  color: gray;
+}
+.slider .search .in {
+  border-bottom: 1px solid #7648ea;
+  background-color: #0b0433;
+}
+.slider .search .date {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.slider .search .date .search-date {
+  padding-right: 10px;
+}
+.slider .search .date .icon {
+  border-radius: 5px;
+  background-color: #7648ea;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=hero.css.map */

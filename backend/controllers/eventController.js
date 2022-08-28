@@ -36,35 +36,27 @@ const createEvent = asyncHandler(async (req, res) => {
 });
 
 const oneEvent = asyncHandler(async (req, res) => {
-  const { id } = req.params;
-  const event = await Event.findById(id).populate("creator", "name");
-  if (!event) return res.status(400).send("no event found");
-  res.status(200).send(event);
+  const id = req.params.id;
+  try {
+    const event = await Event.findById(id).populate("creator", "name");
+    if (!event) return res.status(400).send("no event found");
+    res.status(200).send(event);
+  } catch (error) {
+    res.status(400);
+    throw new Error(error.message);
+  }
 });
 
 const editEvent = asyncHandler(async (req, res) => {
-  var { title, type, description, price, location, id } = req.body;
+  const id = req.params.id;
+  if (!req.body)
+    return res.status(400).send("Data to update can not be empty!");
   const event = await Event.findById(id);
   if (!event) return res.status(400).send("no event found");
-  if (!title) title = event.title;
-  if (!type) type = event.type;
-  if (!description) description = event.description;
-  if (!price) price = event.price;
-  if (!location) location = event.location;
   try {
-    const eventUpdate = await Event.findByIdAndUpdate(
-      id,
-      {
-        title,
-        type,
-        description,
-        price,
-        location,
-      },
-      {
-        new: true,
-      }
-    ).populate("creator", "name");
+    const eventUpdate = await Event.findByIdAndUpdate(id, req.body, {
+      useFindAndModify: false,
+    }).populate("creator", "name");
     res.status(200).send(eventUpdate);
   } catch (error) {
     res.status(400);
@@ -74,7 +66,18 @@ const editEvent = asyncHandler(async (req, res) => {
 
 const filterEvents = asyncHandler(async (req, res) => {});
 
-const deleteEvent = asyncHandler(async (req, res) => {});
+const deleteEvent = asyncHandler(async (req, res) => {
+  const id = req.params.id;
+  const event = await Event.findById(id);
+  if (!event) return res.status(400).send("no event found");
+  try {
+    const events = await Event.findByIdAndRemove(id);
+    res.status(200).send("Deleted successfuly");
+  } catch (error) {
+    res.status(400);
+    throw new Error(error.message);
+  }
+});
 
 module.exports = {
   allEvents,

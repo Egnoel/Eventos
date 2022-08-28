@@ -1,0 +1,32 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  width: 60%;
+  height: 40px;
+}
+.navbar .botoes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 20%;
+  margin-right: -270px;
+}
+.navbar .botoes button {
+  font-weight: bold;
+  padding-right: 10px;
+}
+.navbar .botoes button p {
+  color: #7848F4;
+  background-color: #efe2ff;
+  border-radius: 5px;
+  height: 30px;
+  width: 100px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=navbar.css.map */

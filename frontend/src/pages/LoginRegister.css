@@ -1,0 +1,9 @@
+
+
+.wrapper{
+    min-height: 100vh;
+    display: flex;
+    background-image: url("../events.jpg");
+    background-position: center;
+    background-size: cover;
+}

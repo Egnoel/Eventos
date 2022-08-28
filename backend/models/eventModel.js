@@ -7,6 +7,7 @@ const eventSchema = mongoose.Schema(
     type: { type: "String", required: true },
     eventDate: { type: "Date", required: true, default: Date.now() },
     description: { type: "String", required: true },
+    category: { type: "String", required: true },
     price: { type: "String", required: true, default: "0.00" },
     location: { type: "String", required: true },
     eventpic: {

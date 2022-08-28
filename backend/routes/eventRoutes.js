@@ -12,10 +12,10 @@ const {
 const router = express.Router();
 
 router.route("/").get(allEvents);
-router.route("/:eventId").get(oneEvent);
+router.route("/:id").get(oneEvent);
 router.route("/create").post(protect, createEvent);
-router.route("/edit").put(protect, editEvent);
+router.route("/:id").put(protect, editEvent);
 router.route("/filter").get(filterEvents);
-router.route("/:eventId").delete(deleteEvent);
+router.route("/:id").delete(deleteEvent);
 
 module.exports = router;
