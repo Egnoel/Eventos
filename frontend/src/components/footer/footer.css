@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.container .footer-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: -50px;
+  justify-content: space-between;
+  width: 50%;
+}
+.container .footer-container .more {
+  display: flex;
+  flex-direction: column;
+}
+.container .footer-container .more h1 {
+  font-size: 15px;
+  color: white;
+  margin-bottom: 2px;
+}
+.container .footer-container .more p {
+  color: gray;
+}
+.container .footer-container .connect {
+  display: flex;
+  flex-direction: column;
+}
+.container .footer-container .connect h1 {
+  font-size: 15px;
+  color: white;
+  margin-bottom: 2px;
+}
+.container .footer-container .connect p {
+  color: gray;
+}
+.container .footer-container .connect .social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.container .footer-container .connect .social p {
+  color: gray;
+}
+.container .footer-container .connect .social .icon {
+  margin-right: 5px;
+  color: gray;
+}
+.container .solid {
+  width: 70%;
+  margin: 15px;
+  border-top: 2px solid #7648ea;
+}
+.container .author {
+  color: #efe2ff;
+}/*# sourceMappingURL=footer.css.map */

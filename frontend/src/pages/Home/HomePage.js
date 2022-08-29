@@ -8,6 +8,7 @@ import Hero from "../../components/heroSection/Hero";
 import images from "../../images";
 import NavBar from "../../components/navbar/NavBar";
 import EventList from "../../components/EventsList/EventList";
+import Footer from "../../components/footer/Footer";
 
 const HomePage = () => {
   const { user } = ChatState();
@@ -23,7 +24,9 @@ const HomePage = () => {
       <div className="events">
         <EventList />
       </div>
-      <div className="footer">Footer</div>
+      <div className="footer">
+        <Footer />
+      </div>
     </Container>
   );
 };
