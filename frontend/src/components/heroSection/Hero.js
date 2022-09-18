@@ -1,64 +1,52 @@
 import React, { useState } from "react";
-import {
-  FaArrowAltCircleRight,
-  FaArrowAltCircleLeft,
-  FaSearch,
-} from "react-icons/fa";
+import { FaPlus, FaArrowLeft } from "react-icons/fa";
 
 import "./hero.css";
 
-const Hero = ({ images }) => {
-  const [current, setCurrent] = useState(0);
-  const length = images.length;
-
-  const nextSlide = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
-  };
-
-  const prevSlide = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
-  };
-
-  if (!Array.isArray(images) || images.length <= 0) {
-    return null;
-  }
-
+const Hero = ({ data }) => {
   return (
     <section className="slider">
-      <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
-      <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
-      {images.map((slide, index) => {
-        return (
-          <div
-            className={index === current ? "slide active" : "slide"}
-            key={index}
-          >
-            {index === current && (
-              <img src={slide.src} alt={slide.alt} className="image" />
-            )}
-          </div>
-        );
-      })}
-      <div className="search">
-        <div className="center">
-          <div className="category">
-            <p className="text">Looking For</p>
-            <input type="text" placeholder="UI/X Designer" className="in" />
+      <img src="./image/dj.jpg" alt="Image1" className="image" />
+      <div className="back">
+        <div className="icon">
+          <FaArrowLeft />
+        </div>
+        <p>Back</p>
+      </div>
+      <div className="left">
+        <div className="title">
+          <p>{data.title}</p>
+        </div>
+        <div className="creator">
+          <p>{data.creator}</p>
+        </div>
+        <div className="location">
+          <p>{data.location}</p>
+        </div>
+      </div>
+      <div className="right">
+        <div className="dateTime">
+          <h1>Date & Time</h1>
+
+          <div className="eventTime">
+            <p className="date">{data.date}</p> <p>at {data.time}</p>
           </div>
         </div>
-        <div className="center">
-          <div className="place">
-            <p className="text">In</p>
-            <input type="text" placeholder="Luanda" className="in" />
-          </div>
-        </div>
-        <div className="date">
-          <div className="search-date">
-            <p className="text">When</p>
-            <input type="text" placeholder="Any Date" className="in" />
-          </div>
+        <div className="calendar">
           <div className="icon">
-            <FaSearch />
+            <FaPlus />
+          </div>
+          <p>Add to calendar</p>
+        </div>
+        <div className="participate">
+          <div className="bookNow">
+            <p>Book Now</p>
+          </div>
+          <div className="chat">
+            <p>Join the chat</p>
+          </div>
+          <div className="policy">
+            <p>No Refunds</p>
           </div>
         </div>
       </div>

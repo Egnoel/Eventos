@@ -5,7 +5,8 @@ import Chatpage from "./pages/ChatPage";
 import HomePage from "./pages/Home/HomePage";
 import ProfilePage from "./pages/ProfilePage";
 import AddEventPage from "./pages/AddEventPage";
-import SearchPage from "./pages/SearchPage";
+import SearchPage from "./pages/SearchPage/SearchPage";
+import EventPage from "./pages/EventPage/EventPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="profile" element={<ProfilePage />} />
         <Route path="add" element={<AddEventPage />} />
         <Route path="search" element={<SearchPage />} />
+        <Route path="event" element={<EventPage />} />
       </Routes>
     </div>
   );

@@ -2,90 +2,112 @@
   position: relative;
   height: 400px;
   display: flex;
-}
-.slider .right-arrow {
-  position: absolute;
-  top: 50%;
-  right: 32px;
-  font-size: 3rem;
-  color: #000;
-  z-index: 10;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-.slider .left-arrow {
-  position: absolute;
-  top: 50%;
-  left: 32px;
-  font-size: 3rem;
-  color: #000;
-  z-index: 10;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  flex-direction: row;
 }
 .slider .image {
   width: 100%;
-  height: 350px;
   border-radius: 10px;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
-.slider .slide {
-  opacity: 0;
-  transition-duration: 1s ease;
+.slider .left {
   position: absolute;
-  left: 35px;
-  top: 15px;
-  width: 859px;
-}
-.slider .slide.active {
-  opacity: 1;
-  transition-duration: 1s;
-  transform: scale(1.08);
-}
-.slider .search {
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  top: 80%;
   left: 10%;
-  background-color: #0b0433;
+  top: 30%;
   color: white;
 }
-.slider .search .center {
+.slider .left .title {
+  font-size: 24px;
+}
+.slider .left .creator {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.slider .right {
+  position: absolute;
+  right: 10%;
+  background-color: white;
+  top: 20%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  width: 250px;
+  height: 250px;
+  padding: 10px;
 }
-.slider .search .text {
-  font-size: 10px;
+.slider .right .dateTime {
+  display: flex;
+  flex-direction: column;
+}
+.slider .right .dateTime h1 {
+  font-weight: bold;
+}
+.slider .right .dateTime .eventTime {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
   color: gray;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-.slider .search .in {
-  border-bottom: 1px solid #7648ea;
-  background-color: #0b0433;
+.slider .right .dateTime .eventTime .date {
+  margin-right: 5px;
 }
-.slider .search .date {
+.slider .right .dateTime .eventTime .p {
+  margin-left: 5px;
+}
+.slider .calendar {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
 }
-.slider .search .date .search-date {
-  padding-right: 10px;
+.slider .calendar .icon {
+  margin-right: 10px;
+  color: #9c7ff5;
 }
-.slider .search .date .icon {
-  border-radius: 5px;
-  background-color: #7648ea;
-  height: 35px;
-  width: 35px;
+.slider .calendar p {
+  color: #9c7ff5;
+}
+.slider .participate {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  margin-top: 20px;
+}
+.slider .participate .bookNow {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 30px;
+  background-color: #7f50f3;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  color: white;
+}
+.slider .participate .chat {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 30px;
+  background-color: #eaebef;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  color: #3e3f4c;
+}
+.slider .participate .policy {
+  font-size: 12px;
+  color: gray;
+}
+.slider .back {
+  position: absolute;
+  left: 10%;
+  top: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+}
+.slider .back .icon {
+  margin: 10px;
 }/*# sourceMappingURL=hero.css.map */

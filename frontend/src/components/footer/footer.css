@@ -2,12 +2,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #0b0433;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
   width: 100%;
 }
 .container .footer-container {
   display: flex;
   flex-direction: row;
-  margin-top: -50px;
   justify-content: space-between;
   width: 50%;
 }
