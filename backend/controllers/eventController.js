@@ -13,9 +13,9 @@ const allEvents = asyncHandler(async (req, res) => {
 });
 
 const createEvent = asyncHandler(async (req, res) => {
-  const { title, type, description, price, location } = req.body;
+  const { title, type, description, price, location, category } = req.body;
   if (!req.user) return res.status(400).send("user not found");
-  if (!title || !type || !description || !location)
+  if (!title || !type || !description || !location || !category)
     return res.status(400).send("please fill all the fields");
   const user = req.user;
   try {
@@ -26,6 +26,7 @@ const createEvent = asyncHandler(async (req, res) => {
       description,
       price,
       location,
+      category,
     });
     event = await event.populate("creator", "-password").execPopulate();
     res.status(200).send(event);
@@ -64,7 +65,20 @@ const editEvent = asyncHandler(async (req, res) => {
   }
 });
 
-const filterEvents = asyncHandler(async (req, res) => {});
+const filterEvents = asyncHandler(async (req, res) => {
+  const category = req.body.category;
+  try {
+    const event = await Event.find({ category: category }).populate(
+      "creator",
+      "name"
+    );
+    if (!event) return res.status(400).send("no event found");
+    res.status(200).send(event);
+  } catch (error) {
+    res.status(400).send("filter error");
+    throw new Error(error.message);
+  }
+});
 
 const deleteEvent = asyncHandler(async (req, res) => {
   const id = req.params.id;

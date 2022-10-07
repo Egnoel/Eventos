@@ -9,7 +9,174 @@
     .navbar
         width: 60%
         height: 40px
+    .content
+        width: 60%
+        display: flex
+        flex-direction: column
+        margin-top: 30px
+
+        .filter
+            width: 50%
+            margin-bottom: 40px
+            .filter-top
+                display: flex
+                flex-direction: row
+                margin-bottom: 15px
+                input
+                    background-color: #f2f3f4
+                button
+                    margin-left: 20px
+                    background-color: #7648ea
+                    width: 55px
+                    height: 30px
+                    border-radius: 5px
+            .filter-down
+                display: flex
+                flex-direction: row
+                justify-content: space-between
+                .weekdays, .eventType
+                    display: flex
+                    padding: 5px
+                    margin-right: 10px
+                    width: 100px
+                    height: 40px
+                    border-radius: 5px
+                    background-color: #efe2ff
+                    align-items: center
+                    justify-content: space-between
+                    text-align: center
+                    .icon
+                        color: #7648ea
+                .eventCategory
+                    display: flex
+                    padding: 5px
+                    color: #131315
+                    width: 130px
+                    height: 40px
+                    border-radius: 5px
+                    background-color: #efe2ff
+                    align-items: center
+                    justify-content: space-between
+                    text-align: center
+                    .icon
+                        color: #7648ea
+        .eventlist-content
+            display: grid
+            grid-template-columns: auto auto auto
+            .content
+                background-color: rgba(255, 255, 255, 0.8)
+                border: 1px solid white
+                margin: 10px
+                text-align: center
+                width: 250px
+                height: 200px
+                position: relative
+                border-radius: 5px
+                .reaction
+                    position: absolute
+                    z-index: 1
+                    top: 5px
+                    left: 15px
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    flex-direction: row
+                    width: 220px
+                    .price
+                        width: 60px
+                        height: 20px
+                        background-color: #F8F8FA
+                        color: black
+                        border-radius: 5px
+                        text-align: center
+                        font-weight: bold
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        font-size: 12px
+                    .like
+                        display: flex
+                        flex-direction: row
+                        justify-content: space-between
+                        align-items: center
+                        .chat
+                            color: blue
+                        .icon
+                            margin-right: 5px
+                            width: 30px
+                            height: 30px
+                            background-color: #F8F8FA
+                            border-radius: 50%
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                .upp
+                    height: 50%
+                    width: 100%
+
+                    .image
+                        height: 100%
+                        width: 100%
+                        object-fit: cover
+                        border-top-left-radius: 5px
+                        border-top-right-radius: 5px
+                .down
+                    height: 50%
+                    width: 100%
+                    display: flex
+                    flex-direction: row
+
+                    align-items: center
+                    .left
+                        display: flex
+                        flex-direction: column
+                        width: 25%
+                        .month
+                            color: #7648ea
+                            font-weight: bold
+                        .day
+                            font-weight: bold
+                    .right
+                        display: flex
+                        flex-direction: column
+                        .title
+                            font-weight: bold
+                            margin-left: -50px
+                        .text
+                            font-size: 12px
+                            color: gray
+        .eventlist-footer
+            display: flex
+            flex-direction: row
+            position: relative
+            align-items: center
+            margin-top: 25px
+            margin-left: 45%
+            background-color: #efe2ff
+            width: 120px
+            height: 30px
+            border-radius: 5px
+            .icon-left
+                position: absolute
+                left: 3px
+            .icon-right
+                position: absolute
+                right: 3px
+            .numbers
+                position: absolute
+                display: flex
+                flex-direction: row
+                align-items: center
+                justify-content: center
+                left: 18px
+                p
+                    margin-right: 5px
+                    font-size: 12px
+                    width: 25px
+                    height: 18px
+                    border-radius: 50%
+
+                    text-align: center
 
     .footer
         width: 100%
-        margin-top: 100%
